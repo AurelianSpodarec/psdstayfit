@@ -14,6 +14,7 @@
 }
 
 %nav-list {
+
 	@include transition(all 0.5s ease-in-out);
 	@include media-query(x-large) {
 		width:69%;
@@ -21,7 +22,7 @@
 		text-align: center;
 	}
 	&.is-active.site-nav__list{ 
-		@include media-query(large) {
+		@include media-query(x-large) {
 			width: 85.7%;
 			text-align: right;
 		}

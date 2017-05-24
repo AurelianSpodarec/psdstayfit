@@ -4,8 +4,8 @@
 
 .footer {
 	&__body {
-		background-color: #1c1c1c;
-		color: #fff;
+		background-color: #1e1e1e;
+		color: #afafaf;
 
 	}
 
@@ -17,39 +17,83 @@
 	    color: lighten($brand-color, 5%);
 	}
 
-	&--info {
-		padding-bottom: 45px;
-    	padding-top: 40px;
+	&__info {
+    	padding-top: 70px;
 	}
 
-	&--row {
+	&__row {
 		@include container;
 		@include susy-clearfix;
 	}
 
-	&--col {
-		@include span(12);
-		@include media-query(large) {
-			@include span(4);
+	&__col {
+		
+		&--small {
+			@include span(3 of 14);
+		}
+
+		&--large {
+			@include span(8 of 14);
+		}
+
+	}
+
+	// &__back-to-top {
+	// 	@include susy-clearfix;
+	// 	background-color: none repeat scroll 0 0 #1c1c1c;
+	//     border-top: 1px solid #353535;
+	//     position: relative;
+	// 	color: #fff;
+	//     font-size: 24px;
+	//     padding: 12px 0;
+	//     text-align: center;
+	//     a {
+	//     	color: white;
+	// 	}
+	// 	&:hover {
+	// 		background-color: lighten($brand-color, 5%);
+	// 		color: white;
+	// 	}
+	// }
+
+	&--about-des {
+		text-align: right;
+	}
+
+	&--about-head {
+		color: white;
+		text-transform: uppercase;
+		font-size: 1.8em; 
+		font-family: sans-serif;
+		font-weight: bold;
+		&-f {
+			background-color: $brand-color;
+			padding-left: 12px;
 		}
 	}
 
-	&__back-to-top {
-		@include susy-clearfix;
-		background-color: none repeat scroll 0 0 #1c1c1c;
-	    border-top: 1px solid #353535;
-	    position: relative;
-		color: #fff;
-	    font-size: 24px;
-	    padding: 12px 0;
-	    text-align: center;
-	    a {
-	    	color: white;
-		}
-		&:hover {
-			background-color: lighten($brand-color, 5%);
-			color: white;
+	&__contact-box {
+		background-color: white;
+		padding: 85px;
+		height: 600px;
+		
+		z-index: 1000;
+		
+		margin: -200px 46px 0;
+
+		&--header {
+			text-align: center;
+			color: $brand-color;
+			font-weight: bold;
+			font-size: 2em;
+			font-style: sans-serif;
+			text-transform: uppercase;
 		}
 	}
+
+	&__copyright {
+		text-align: center;
+		padding: 60px; 
+	}	
 
 }
