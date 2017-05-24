@@ -14,6 +14,10 @@
 
 	&__link {
 		@extend %nav-link;
+		&--active {
+			@extend %nav-link;
+			@extend %nav-active;
+		}
 		&:hover {
 			@extend %nav-active;
 		}

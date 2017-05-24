@@ -5,11 +5,14 @@
 *, *:before, *:after {
 	@include box-sizing(border-box);
 }
+ html, body {
+	height: 100%;
+}
 
 body {
-	font-family:'Lato';
+	font-family: $global-font;
 	font-size: $base-font-size;
-	background-color: #f5f5f5;
+	background-color: $base-bg;
 
 	line-height: ($base-line/$base-font-size);
     //text-align: justify;
@@ -20,22 +23,27 @@ body {
 }
 
 a {
+	color: $brand-color;
 	text-decoration: none;
-
+	&:hover {
+		color: lighten($brand-color, 10%);
+	}
 }
 
 ul,ol {
-	margin: 0;
-	padding: 0;
 	list-style: none;
 }
 
-h1,h2,h3,h4,h5,h6,p {
-	margin: 0;
-	padding: 0;
-}
-
-span {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+ul,
+ol {
 	margin: 0;
 	padding: 0;
 }

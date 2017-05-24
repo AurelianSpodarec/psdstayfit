@@ -1,3 +1,55 @@
 // ==========================================================================
-// #Settings
+// #Footer
 // ==========================================================================
+
+.footer {
+	&__body {
+		background-color: #1c1c1c;
+		color: #fff;
+
+	}
+
+	&__heading {
+	    font-weight: bold;
+	    line-height: 24px;
+	    margin: 0 0 10px;
+	    text-transform: none;
+	    color: lighten($brand-color, 5%);
+	}
+
+	&--info {
+		padding-bottom: 45px;
+    	padding-top: 40px;
+	}
+
+	&--row {
+		@include container;
+		@include susy-clearfix;
+	}
+
+	&--col {
+		@include span(12);
+		@include media-query(large) {
+			@include span(4);
+		}
+	}
+
+	&__back-to-top {
+		@include susy-clearfix;
+		background-color: none repeat scroll 0 0 #1c1c1c;
+	    border-top: 1px solid #353535;
+	    position: relative;
+		color: #fff;
+	    font-size: 24px;
+	    padding: 12px 0;
+	    text-align: center;
+	    a {
+	    	color: white;
+		}
+		&:hover {
+			background-color: lighten($brand-color, 5%);
+			color: white;
+		}
+	}
+
+}

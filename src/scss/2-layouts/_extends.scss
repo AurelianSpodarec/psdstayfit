@@ -4,14 +4,10 @@
 
 //Header Nav
 %nav-block {
-	display: block;
+	
 	text-align: center;
-	webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
- 
+    @include transition(all 0.5s ease-in-out);
+ 	
 	@include media-query(large) {
 		float: left;
 	}
@@ -25,9 +21,11 @@
 		text-align: center;
 	}
 	&.is-active.site-nav__list{ 
+		@include media-query(large) {
 			width: 85.7%;
 			text-align: right;
 		}
+	}
 
 }
 
@@ -40,16 +38,19 @@
 }
 
 %nav-link {
-	color: #515e65;
+	font-weight: bold;
+
+    display: block;
+
     padding: 10px 15px;
-    font-weight: bold;
+
+    transition: color, background-color, .15s linear;
+    transition-property: color, background-color;
     vertical-align: middle;
     text-decoration: none;
     text-transform: uppercase;
-    display: block;
-    transition-property: color, background-color;
-    display: block;
-    transition: color, background-color, .15s linear;
+
+    color: #111;
     @include media-query(x-large) {
     	padding-top: 0;
     	padding-bottom: 0;
@@ -58,7 +59,7 @@
 }
 
 %nav-active {
-	color: pink;
+	color: $brand-color;;
 }
 
 //Header Contact
@@ -89,7 +90,7 @@ $header-c-transform-bot:20deg;
 }
 
 %header-c-email {
-	background: #E4007C;
+	background: $brand-color;
     top: 0;
     @include transform(skew($header-c-transform-top));
 

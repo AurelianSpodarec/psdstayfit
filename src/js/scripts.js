@@ -1,7 +1,7 @@
 jQuery(document).ready(function($){
-        //Hamburger Menu
-        // $('.c-mainNavigationPanel--mobileMenuButton').click(function(){
-        //     $('.c-mainNavigationPanel--menuContainer').slideToggle();
+        
+        // $('.header__hamburger').click(function(){
+        //     $('.header__nav-wrap').toggle();
         // });
 
         //Menu Change on scroll
@@ -16,11 +16,8 @@ jQuery(document).ready(function($){
                 $(".header-contact__item--phone").removeClass("collapse");
                 $(".site-nav__list").removeClass("is-active");
             }
-
-            
-
         });
 
-
-
 });
+
+

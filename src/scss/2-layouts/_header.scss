@@ -2,28 +2,32 @@
 // #Header
 // ==========================================================================
 
+$header-paddings: 24px;
+$header-bg-color: #fff;
+
 .header {
-		border-bottom: none;
-	    background: #ffffff;
-	    border-top: 3px solid #E4007C;
-	    margin-bottom: 0;
-  
-	    @include transition(all 0.5s ease-in-out);
-	    background-color: #fff;
-	    border-top: 3px solid #E4007C;
-	    padding-top: 24px;
-    	padding-bottom: 24px;
-	    overflow: hidden;
-	    position: fixed;
-	    top: 0;
-	   
-	    width: 100%;
+		
+  	position: fixed;
+    top: 0;
+
+    overflow: hidden;
+
+    width: 100%;
+    margin-bottom: 0;
+    padding-top: $header-paddings;
+    padding-bottom: $header-paddings;
+
+    @include transition(all 0.5s ease-in-out);
+
+    border-top: 3px solid $brand-color;
+    border-bottom: none;
+    background-color: $header-bg-color;
 
 	&__body {
+		    text-align: center;
 		    line-height: 2em;
 		    @include container;
 		    @include susy-clearfix;
-		    text-align: center;
 		&--inner{
 			@include span(12);
 		}
@@ -44,19 +48,22 @@
 
 	&__nav-wrap {
 		@include susy-clearfix;
-
 	}
 
 	&__logo {
-	    display: inline-block;
-	    font-size: 2.2em;
-	    text-transform: uppercase;
+	 	font-size: 2.2em;
 	    font-weight: 700;
+
+	    display: inline-block;
+	    float: left;
+
+	    text-transform: uppercase;
+
 	    color: #000;
-	    float: left; 
 
 	    &--first-word {
 	    	font-size: 150%;
+	    	color: $brand-color;
 	    }
 	    @include media-query(medium) {
 	    	float: none;
