@@ -1,0 +1,34 @@
+// ==========================================================================
+// #Header Contact
+// ==========================================================================
+
+.header-contact {
+
+	&__item {
+		@extend %header-c-item;
+		&--email {
+			@extend %header-c-item;
+			@extend %header-c-email;
+			&.collapse.header-contact__item--email{
+		    	@extend %header-c-item-active;
+		    }
+		}
+		&--phone {
+			@extend %header-c-item;
+			@extend %header-c-phone;
+			&.collapse.header-contact__item--phone{
+		    	@extend %header-c-item-active;
+		    }
+		}
+	}// item
+
+	&__text {
+		&--email {
+			@extend %header-c-text-email;
+		}
+		&--phone {
+			@extend %header-c-text-phone; 
+		}
+	}// text
+
+}

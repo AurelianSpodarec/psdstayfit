@@ -1,0 +1,41 @@
+// ==========================================================================
+// #Base
+// ==========================================================================
+
+*, *:before, *:after {
+	@include box-sizing(border-box);
+}
+
+body {
+	font-family:'Lato';
+	font-size: $base-font-size;
+	background-color: #f5f5f5;
+
+	line-height: ($base-line/$base-font-size);
+    //text-align: justify;
+    @if ($body-antialiased) {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+a {
+	text-decoration: none;
+
+}
+
+ul,ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+	margin: 0;
+	padding: 0;
+}
+
+span {
+	margin: 0;
+	padding: 0;
+}
