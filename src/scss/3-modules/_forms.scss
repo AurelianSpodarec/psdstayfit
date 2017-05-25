@@ -1,0 +1,53 @@
+// ==========================================================================
+// #Forms
+// ==========================================================================
+
+.form {
+	
+	&__sp-wrap {
+		margin: 73px 0 20px 0;
+	}
+
+
+
+	&__sp-control {
+		cursor: pointer;
+		display: inline-block;	
+		width: 100%;
+		margin-bottom: 55px;
+		&:hover .form__sp-label{
+			color: $brand-color;
+		}
+	}
+
+	&__sp-label {
+		color: #4d4d4d;
+		text-transform: uppercase;
+		font-weight: bold;
+		display: inline-block;
+		font-family: Helvetica, Arial, sans-serif;
+		width: 100%;
+		font-size: 13px;
+	}
+
+	&__sp-input {
+		cursor: pointer;
+		display: block;
+		font-size: 18px;
+		border: none;
+		width: 100%;
+		border-bottom: solid 2px #ccc;
+	}
+
+
+	&__2 {
+		width: 47%;	
+		float: left;
+		&--r{
+			width: 48%;	
+			float: left;
+			margin-left: 5%;
+		}
+	}
+
+}
