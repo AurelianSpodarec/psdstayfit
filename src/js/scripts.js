@@ -1,8 +1,12 @@
 jQuery(document).ready(function($){
         
-        // $('.header__hamburger').click(function(){
-        //     $('.header__nav-wrap').toggle();
-        // });
+        $('.header__hamburger').click(function(){
+            $('.site-nav__list').toggleClass('is-collapsed');
+        });
+
+  //        $( ".site-nav__list" ).slideToggle( "slow", function() {
+  //   // Animation complete.
+  // });
 
         //Menu Change on scroll
         $(window).on("scroll", function(){

@@ -14,22 +14,31 @@ $header-bg-color: #fff;
 
     width: 100%;
     margin-bottom: 0;
-    padding-top: $header-paddings;
-    padding-bottom: $header-paddings;
 
     @include transition(all 0.5s ease-in-out);
 
     border-top: 3px solid $brand-color;
     border-bottom: none;
-    background-color: $header-bg-color;
+
+    @include media-query(medium) {
+    	background-color: white;
+    }
+   
 
 	&__body {
-		    text-align: center;
-		    line-height: 2em;
-		    @include container;
-		    @include susy-clearfix;
+	    text-align: center;
+	    line-height: 2em;
+	    @include container;
+	    @include susy-clearfix;
+	    margin-left: -2.08333%;
+		margin-right: -2.08333%;
+		@include media-query(medium) {
+			margin: auto;
+		}
+
 		&--inner{
 			@include span(12);
+			
 		}
 		@include media-query(x-large) {
 			text-align: inherit;
@@ -39,10 +48,17 @@ $header-bg-color: #fff;
 	&__head {
 		display: block;
 		width: 100%;
+		background: white;
+		padding: 16px 2.08333%;
+		padding-top: 16px;
+    	padding-bottom: 16px;
+    	z-index: 9999;
+    	position: relative;
 		@include susy-clearfix;
 		@include media-query(x-large) {
 			float: left;
 			width: auto;
+			padding: 24px 0;
 		}
 	}
 
@@ -51,7 +67,7 @@ $header-bg-color: #fff;
 	}
 
 	&__logo {
-	 	font-size: 2.2em;
+	 	font-size: 1.7em;
 	    font-weight: 700;
 
 	    display: inline-block;
@@ -67,9 +83,11 @@ $header-bg-color: #fff;
 	    }
 	    @include media-query(medium) {
 	    	float: none;
+	    	font-size: 2em;
 	    }
 	    @include media-query(x-large) {
 	    	float: left;
+	    	font-size: 2.2em;
 	    }
 	}
 

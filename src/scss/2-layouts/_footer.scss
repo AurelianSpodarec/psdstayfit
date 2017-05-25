@@ -18,8 +18,14 @@
 	}
 
 	&__info {
-    	padding-top: 100px;
+    	padding-top: 60px;
     	border-top: 4px solid #e4007c;
+    	@include media-query(medium) {
+    		padding-top: 80px;
+    	}
+    	@include media-query(large) {
+    		padding-top: 100px;
+    	}
 	}
 
 	&__row {
@@ -30,11 +36,18 @@
 	&__col {
 		
 		&--small {
-			@include span(3 of 14);
+
+			@include span(12);
+			@include media-query(large) {
+				@include span(3 of 14);
+			}
 		}
 
 		&--large {
-			@include span(8 of 14);
+			@include span(12);
+			@include media-query(large) {
+				@include span(8 of 14);
+			}
 		}
 
 	}
@@ -58,7 +71,10 @@
 	// }
 
 	&--about-des {
-		text-align: right;
+		text-align: center;
+		@include media-query(large) {
+			text-align: right;
+		}
 	}
 
 	&--about-head {
@@ -67,6 +83,7 @@
 		font-size: 1.8em; 
 		font-family: sans-serif;
 		font-weight: bold;
+		z-index: 9999;
 		&-f {
 			background-color: $brand-color;
 			padding-left: 12px;
@@ -75,11 +92,11 @@
 
 	&__contact-box {
 		background-color: white;
-		padding: 65px 85px 65px;
+		padding: 25px 45px 25px;
 		
 		z-index: 1000;
 		
-		margin: -230px 46px 0;
+		margin: 50px 0;
 
 		&--header {
 			text-align: center;
@@ -89,15 +106,28 @@
 			font-style: sans-serif;
 			text-transform: uppercase;
 		}
+		@include media-query(medium) {
+			padding: 45px 65px 45px;
+		}
+		@include media-query(large) {
+			margin: -210px 46px 0;
+		}
+		@include media-query(x-large) {
+			margin: -230px 46px 0;
+			padding: 65px 85px 65px;
+		}
 	}
 
 	&__contact-info {
-
+		@include susy-clearfix;
 		& i {
 			color: $brand-color;
-			float: left;
-			padding-right: 15px;
-			padding-bottom: 60px;
+			
+			@include media-query(large) {
+				float: left;
+				padding-right: 15px;
+				padding-bottom: 60px;	
+			}
 		}
 
 		&--heading {
@@ -109,6 +139,18 @@
 
 		&--wrap {
 			margin-bottom: 40px;
+		}
+
+		&--col {
+			text-align: center;
+			@include span(12)
+			@include media-query(medium) {
+				@include span(4);
+			}
+			@include media-query(large) {
+				@include span(12);
+				text-align: inherit;
+			}
 		}
 
 	}

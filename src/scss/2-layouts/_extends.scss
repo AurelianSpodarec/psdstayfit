@@ -7,19 +7,38 @@
 	
 	text-align: center;
     @include transition(all 0.5s ease-in-out);
- 	
-	@include media-query(large) {
-		float: left;
-	}
+	@include susy-clearfix;
+ 
 }
 
 %nav-list {
-
+    display: block;
+    height: 0;
+    width: 100%;
+    transition: .2s ease-in-out;
+    transform: translateY(-140%);
+    background-color: white;
+    @include media-query(medium) {
+    	transform: translateY(0);
+    	position: inherit;
+    	display: inherit;
+    	width: inherit;
+    }
 	@include transition(all 0.5s ease-in-out);
+
 	@include media-query(x-large) {
 		width:69%;
+		padding-top: 24px;
+    	padding-bottom: 24px;
 		float: left;
 		text-align: center;
+	}
+
+	//Active
+	&.is-collapsed.site-nav__list {
+		transform: translateY(0);
+		height: 100%;
+		 
 	}
 	&.is-active.site-nav__list{ 
 		@include media-query(x-large) {
