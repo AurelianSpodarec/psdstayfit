@@ -53,6 +53,7 @@ gulp.task('app',function(){
             .pipe(sourcemaps.write())
             .pipe(gulp.dest(''+config.css+''))
             .pipe(reload({stream:true}));
+            
 
 });
 
@@ -181,8 +182,20 @@ gulp.task('jquery', function() {
 
 
 
+// ////////////////////////////////////////////////
+//
+// Move Pogo Slider
+//
+// // /////////////////////////////////////////////
+gulp.task('pogo-slider', function() {
+    return gulp.src('bower_components/pogo-slider/jquery.pogo-slider.min.js')
+        .pipe(gulp.dest('src/js'));
+});
+
+
+
 
 // ////////////////////////////////////////////////
 // Gulp Default task
 // ///////////////////////////////////////////////
-gulp.task('default', ['watch', 'icons', 'jquery', 'browserSync','app','html']);
+gulp.task('default', ['watch', 'icons', 'jquery', 'browserSync','pogo-slider', 'app','html']);

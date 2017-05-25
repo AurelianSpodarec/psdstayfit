@@ -11,7 +11,7 @@ $header-bg-color: #fff;
     top: 0;
     font-size: 14px;
     overflow: hidden;
-
+    z-index: 9999;
     width: 100%;
     margin-bottom: 0;
 
@@ -50,8 +50,6 @@ $header-bg-color: #fff;
 		width: 100%;
 		background: white;
 		padding: 16px 2.08333%;
-		padding-top: 16px;
-    	padding-bottom: 16px;
     	z-index: 9999;
     	position: relative;
 		@include susy-clearfix;
