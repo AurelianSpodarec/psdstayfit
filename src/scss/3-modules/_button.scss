@@ -51,4 +51,29 @@
     	text-align: center;
     }
 
+    &--join {
+            background: transparent;
+        font-size: 14px !important;
+        color: #ffffff;
+        border: 1px solid #ffffff;
+        border-radius: 0;
+        text-transform: uppercase;
+        padding: 12px 30px !important;
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        -ms-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+        &:hover {
+            background: #E4007C;
+            border-color: #E4007C;
+            color: #ffffff;
+            -webkit-transition: all 0.4s ease-in-out;
+            -moz-transition: all 0.4s ease-in-out;
+            -o-transition: all 0.4s ease-in-out;
+            -ms-transition: all 0.4s ease-in-out;
+            transition: all 0.4s ease-in-out;
+        }
+
+    }
 }

@@ -23,6 +23,7 @@
     	position: inherit;
     	display: inherit;
     	width: inherit;
+        height: 100%;
     }
 	@include transition(all 0.5s ease-in-out);
 
