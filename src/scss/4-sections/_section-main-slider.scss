@@ -1,11 +1,11 @@
 // ==========================================================================
-// #Slider
+// #Main Slider
 // ==========================================================================
 
 .main-slider {
 	margin-top: 67px;
 	@include media-query(medium) {
-    	margin-top: 89px;
+    	margin-top: 86px;
 	}
 
     &__elements {

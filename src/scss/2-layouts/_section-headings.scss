@@ -1,0 +1,39 @@
+// ==========================================================================
+// #Section Headings
+// ==========================================================================
+
+.default-title {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 60px;
+
+    &__bdr {
+    	width: 100px;
+	    height: 5px;
+	    margin: auto;
+	    margin-bottom: 20px;
+	    background: #111111;
+    	@include transform(skew(-30deg));
+    	&--inside {
+    		width: 30px;
+		    height: 5px;
+		    margin: auto;
+		    background: $brand-color;
+    	}
+    }//bdr 
+
+	h2 {
+		text-transform: uppercase;
+		font-size: 1.9em;
+		span {
+			color: $brand-color;
+		}
+		margin-bottom: 20px;
+	}
+
+	p {
+		color: #676767;
+	}
+
+}

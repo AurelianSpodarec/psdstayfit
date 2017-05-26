@@ -14,7 +14,7 @@ body {
 	font-family: $global-font;
 	font-size: $base-font-size;
 	background-color: $base-bg;
-
+	color: #676767;
 	line-height: ($base-line/$base-font-size);
     //text-align: justify;
     @if ($body-antialiased) {
@@ -37,6 +37,16 @@ ul,ol {
 	list-style: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+{
+	color: #111111;
+    font-weight: 700;
+}
 h1,
 h2,
 h3,

@@ -6,7 +6,9 @@ $header-paddings: 24px;
 $header-bg-color: #fff;
 
 .header {
-		
+	-webkit-box-shadow: 0px -2px 8px 0px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0px -2px 8px 0px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px -2px 8px 0px rgba(0, 0, 0, 0.6);
   	position: fixed;
     top: 0;
     font-size: 14px;

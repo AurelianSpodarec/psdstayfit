@@ -1,0 +1,19 @@
+// ==========================================================================
+// #Section Global
+// ==========================================================================
+
+.sec{
+	background-color: white;
+	&--inverse {
+		background-color: #F5F5F5;
+	}
+	&--container {
+		@include container;
+	}
+
+	&--pad-d {
+		padding: 100px 0;
+	    overflow: hidden;
+	}
+
+}

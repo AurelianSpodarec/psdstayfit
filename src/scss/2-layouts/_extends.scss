@@ -16,7 +16,7 @@
     height: 0;
     width: 100%;
     transition: .2s ease-in-out;
-    transform: translateY(-140%);
+    @include transform(translateY(-140%));
     background-color: white;
     @include media-query(medium) {
     	transform: translateY(0);
@@ -37,13 +37,13 @@
 
 	//Active
 	&.is-collapsed.site-nav__list {
-		transform: translateY(0);
+		@include transform(translateY(0));
 		height: 100%;
 		 
 	}
 	&.is-active.site-nav__list{ 
 		@include media-query(x-large) {
-			width: 85.7%;
+			width: 86.5%;
 			text-align: right;
 		}
 	}
@@ -76,6 +76,9 @@
     	padding-top: 0;
     	padding-bottom: 0;
     	margin-top: 5px;
+        &:last-child {
+            padding-right: 0;
+        }
     }
 }
 
