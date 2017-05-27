@@ -4,7 +4,7 @@
 
 .sec-gallery-gutter {
 	margin-right: gutter(11);
-	margin-left: gutter(11);
+	margin-left: gutter(11);@include susy-clearfix;
 }
 
 .portfolio-all-items {
@@ -14,7 +14,8 @@
 .portfolio-item {
 	position: relative;
 	max-height: 250px;
-	@include gallery(12 no-gutter);
+	@include susy-clearfix;
+	@include span(12 no-gutter);
 	@include media-query(medium) {
 		@include gallery(6 no-gutter);
 	}
@@ -41,9 +42,7 @@
 .portfolio-hover-layer {
 	width: 100%;
     height: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 100%;
+    @include absolute(left 0 bottom 100%);
     z-index: 0;
     background: rgba(0, 0, 0, 0.7);
     @include transition(all 0.4s ease-in-out);

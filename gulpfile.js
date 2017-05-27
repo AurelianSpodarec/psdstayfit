@@ -29,6 +29,7 @@ var config = {
                 scss    :[ 'src/scss/**/*.scss' ],
                 css     :[ 'src/css/' ],
                 html    :[ 'src/**/*.html' ],
+                js      :[ 'src/js/*.js'],
                 build   :[ 'build/' ],
                 src     :[ 'src/' ]
             };
@@ -102,15 +103,15 @@ gulp.task('browserSync', function() {
 // create build
 gulp.task('build:create', function(){
     return gulp.src(config.src+'**/*')
-               .pipe(gulp.dest(''+config.build+''));
+               .pipe(gulp.dest(''));
 });
 
 // Clean build folder
 gulp.task('build:clean',['build:create'], function(){
-    return del(['build/bower_components/',
-                'build/scss/',
-                'build/css/!(*.min.css)',
-                'build/js/!(*.min.js)'
+    return del(['bower_components/',
+                'scss/',
+                'css/!(*.min.css)',
+                'js/!(*.min.js)'
               ]);
 });
 
@@ -211,10 +212,17 @@ gulp.task('lightbox', function() {
 });
 
 
+gulp.task('counterup', function() {
+    return gulp.src('bower_components/jquery.counterup/jquery.counterup.min.js')
+        .pipe(gulp.dest('src/js'));
+});
+
+
+
 
 
 
 // ////////////////////////////////////////////////
 // Gulp Default task
 // ///////////////////////////////////////////////
-gulp.task('default', ['watch', 'icons', 'jquery', 'browserSync','pogo-slider','lightbox2', 'lightbox', 'app','html']);
+gulp.task('default', ['watch', 'icons', 'jquery', 'browserSync','pogo-slider','lightbox2', 'lightbox', 'counterup', 'app','html']);

@@ -1,0 +1,53 @@
+// ==========================================================================
+// 5-cheat
+// ==========================================================================
+
+.sec-counter {
+	padding: 80px 0 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    position: relative;
+    color: white;
+    text-align: center;
+	&:before {
+	    content: "";
+	    @include absolute(top 0 left 0);
+	    width: 100%;
+	    height: 100%;
+	    z-index: -1;
+	    background-color: rgba(0, 0, 0, 0.9);
+	}
+}
+
+.counter {
+	color: #ffffff;
+    font-size: 36px;
+	&__col {
+		@include span(12);
+		@include susy-clearfix;
+		@include media-query(medium) {
+			@include span(6);
+			&:last-child {
+				@include last;
+			}
+		}
+		@include media-query(large) {
+			@include span(3);
+ 
+		}
+	}
+
+    &__bdr {
+    	width: 50px;
+	    height: 3px;
+	    background: #E4007C;
+	    margin: 5px auto;
+    }
+    &__title {
+	    color: #ffffff;
+	    letter-spacing: 2px;
+        font-size: 1em;
+        text-transform: uppercase;
+    }
+}

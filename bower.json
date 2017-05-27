@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "pogo-slider": "*",
-    "featherlight": "^1.7.5"
+    "featherlight": "^1.7.5",
+    "jquery.counterup": "^2.1.0"
   }
 }

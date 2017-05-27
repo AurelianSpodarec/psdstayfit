@@ -1,4 +1,6 @@
-jQuery(document).ready(function($){
+(function ( $ ) { 
+
+    "use strict";
         
 //////////////////////////////////////////////////
 //
@@ -50,81 +52,10 @@ jQuery(document).ready(function($){
 
 //////////////////////////////////////////////////
 //
-// JQUERY: SLIDER PLUGIN FROM CODEPEN - https://codepen.io/rockteam/pen/YwZeLW?editors=1100
+// JQUERY: SLIDER PLUGINS
 //
 //////////////////////////////////////////////////
 
-// var imageWidth = 1024;
-// // Slider content loaded
-// $(window).ready(function() {
-//   var currentImage = 0;
-//   //Image count
-//   //attach click event to slideshow buttons
-//   $('.nextarrow').click(function() {
-//     //increase image count
-//     currentImage++;
-//     // if we are at end let set it to 0
-//     if (currentImage >= allImages) currentImage = 0;
-//     // calculate  and set position
-//     setFramePosition(currentImage);
-//   });
-//   //attach click event to slideshow buttons
-//   $('.prevarrow').click(function() {
-//     //increase image count
-//     currentImage--;
-//     // if we are at end let set it to 0
-//     if (currentImage < 0) currentImage = allImages - 1;
-//     // calculate  and set position
-//     setFramePosition(currentImage);
-//   });
-// });
-
-// // Slider
-//   var slideCount = $('#slider2 ul li').length;
-//   var slideWidth = $('#slider2 ul li').width();
-//   var slideHeight = $('#slider2 ul li').height();
-//   var sliderUlWidth = slideCount * slideWidth;
-
-//   $('#slider2').css({
-//     width: slideWidth,
-//     height: slideHeight
-//   });
-//   $('#slider2 ul').css({
-//     width: sliderUlWidth,
-//     marginLeft: -slideWidth
-//   });
-//   $('#slider2 ul li:last-child').prependTo('#slider2 ul');
-
-//   function moveLeft() {
-//     $('#slider2 ul').animate({
-//       left: +slideWidth
-//     }, 200, function() {
-//       $('#slider2 ul li:last-child').prependTo('#slider2 ul');
-//       $('#slider2 ul').css('left', '');
-//     });
-//   };
-
-//   function moveRight() {
-//     $('#slider2 ul').animate({
-//       left: -slideWidth
-//     }, 200, function() {
-//       $('#slider2 ul li:first-child').appendTo('#slider2 ul');
-//       $('#slider2 ul').css('left', '');
-//     });
-//   };
-
-//   // Slider Arrows
-//   $('#slider2 .prevarrow2').click(function() {
-//     moveLeft();
-//   });
-//   $('#slider2 .nextarrow2').click(function() {
-//     moveRight();
-//   });
-
-//   // auto play function
-//   setInterval(function() {
-//     moveRight();
-//   }, 3300);
     // Pogo Slider
     $('.pogoSlider').pogoSlider({
         autoplay: true,
@@ -136,22 +67,6 @@ jQuery(document).ready(function($){
         pauseOnHover: false,
         generateNav: false,
     }).data('plugin_pogoSlider');
-
-           // var mySlider = $('.pogoSlider').pogoSlider().data('plugin_pogoSlider');
-
-           //          mySlider.pause(); // Pauses the slider on the current slide, only works if autoplay option set to true
-
-           //          mySlider.resume(); // Resumes the slider back to normal operation
-
-           //          mySlider.nextSlide(); // Transition to the next slide
-
-           //          mySlider.prevSlide(); // Transition to the previous slide
-
-           //          mySlider.destroy(); // Destroys the plugin, restoring elements to their default state
-
-
-
-// }); //jQuery 
 
 
 
@@ -165,14 +80,36 @@ jQuery(document).ready(function($){
       openSpeed: 300,
       closeSpeed: 300
     });
-    // $('.gallery').featherlightGallery({
-    //     gallery: {
-    //         next: 'next Â»',
-    //         previous: 'Â« previous'
-    //     },
-    //     variant: 'featherlight-gallery2'
+
+    // $('.counter').counterUp({
+    //     delay: 10,
+    //     time: 1000
     // });
 
+    $('.counter').each(function() {
+      var $this = $(this),
+          countTo = $this.attr('data-count');
+      
+      $({ countNum: $this.text()}).animate({
+        countNum: countTo
+      },
 
+      {
 
-});
+        duration: 8000,
+        easing:'linear',
+        step: function() {
+          $this.text(Math.floor(this.countNum));
+        },
+        complete: function() {
+          $this.text(this.countNum);
+          //alert('finished');
+        }
+
+      });  
+      
+      
+
+    });
+
+}( jQuery ));
