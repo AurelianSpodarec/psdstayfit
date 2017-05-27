@@ -196,6 +196,25 @@ gulp.task('pogo-slider', function() {
 
 
 // ////////////////////////////////////////////////
+//
+// Move Lightbox
+//
+// // /////////////////////////////////////////////
+gulp.task('lightbox2', function() {
+    return gulp.src('bower_components/featherlight/src/featherlight.js')
+        .pipe(gulp.dest('src/js'));
+});
+
+gulp.task('lightbox', function() {
+    return gulp.src('bower_components/featherlight/src/featherlight.gallery.js')
+        .pipe(gulp.dest('src/js'));
+});
+
+
+
+
+
+// ////////////////////////////////////////////////
 // Gulp Default task
 // ///////////////////////////////////////////////
-gulp.task('default', ['watch', 'icons', 'jquery', 'browserSync','pogo-slider', 'app','html']);
+gulp.task('default', ['watch', 'icons', 'jquery', 'browserSync','pogo-slider','lightbox2', 'lightbox', 'app','html']);

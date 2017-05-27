@@ -155,4 +155,24 @@ jQuery(document).ready(function($){
 
 
 
+    // Light box - featherlightGallery
+     $('.gallery').featherlightGallery({
+      gallery: {
+          fadeIn: 300,
+          fadeOut: 300,
+          filter: true
+      },
+      openSpeed: 300,
+      closeSpeed: 300
+    });
+    // $('.gallery').featherlightGallery({
+    //     gallery: {
+    //         next: 'next Â»',
+    //         previous: 'Â« previous'
+    //     },
+    //     variant: 'featherlight-gallery2'
+    // });
+
+
+
 });

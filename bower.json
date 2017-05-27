@@ -18,6 +18,7 @@
     "components-font-awesome": "^4.7.0"
   },
   "devDependencies": {
-    "pogo-slider": "*"
+    "pogo-slider": "*",
+    "featherlight": "^1.7.5"
   }
 }

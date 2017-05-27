@@ -3,11 +3,16 @@
 // ==========================================================================
 
 .default-title {
-    width: 50%;
+    width: 100%;
     text-align: center;
     margin: 0 auto;
     margin-bottom: 60px;
-
+   	@include media-query(medium) {
+		width: 80%;
+    }
+    @include media-query(large) {
+    	width: 50%;
+    }
     &__bdr {
     	width: 100px;
 	    height: 5px;

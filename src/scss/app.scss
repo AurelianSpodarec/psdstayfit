@@ -4,7 +4,9 @@
 @import "./bower_components/susy/sass/_susy";
 @import "./bower_components/breakpoint/breakpoint/_breakpoint";
 @import "./bower_components/components-font-awesome/scss/font-awesome";
-//@import "./bower_components/pogo-slider/pogo-slider.min.css";
+@import "./bower_components/pogo-slider/pogo-slider.min";
+@import "./bower_components/featherlight/src/featherlight";
+@import "./bower_components/featherlight/src/featherlight.gallery";
 
 // ==========================================================================
 // 0-Utils
@@ -44,9 +46,10 @@
 @import "4-sections/section-main-slider"; 
 @import "4-sections/section-features";
 @import "4-sections/section-about";
+@import "4-sections/section-gallery";
 @import "4-sections/section-contact";
 
 // ==========================================================================
 // 5-cheat
 // ==========================================================================
-@import "5-cheat/pogo-slider.min.css";
+//@import "5-cheat/pogo-slider.min.css";
